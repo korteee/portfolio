@@ -1,0 +1,109 @@
+@import "./variables";
+
+/** Img Responsive **/
+
+@mixin img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@mixin mobile-p-l {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        @content;
+    }
+}
+
+
+/* Smartphones (landscape) ----------- */
+
+@mixin mobile-l {
+    @media only screen and (min-width: 321px) {
+        @content;
+    }
+}
+
+
+/* Smartphones (portrait) ----------- */
+
+@mixin mobile-p {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@mixin tablet-p-l {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        @content;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+
+@mixin tablet-l {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+
+/* iPads (portrait) ----------- */
+
+@mixin tablet-p {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+
+/**********
+Small Desktop
+**********/
+
+@mixin desktop-sm {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+
+@mixin desktop-md {
+    @media only screen and (min-width: 1224px) {
+        @content;
+    }
+}
+
+
+/* Large screens ----------- */
+
+@mixin desktop-lg {
+    @media only screen and (min-width: 1824px) {
+        @content;
+    }
+}
+
+
+/* For All Desktop */
+
+@mixin desktop {
+    @include desktop-sm {
+        @content;
+    }
+    @include desktop-md {
+        @content;
+    }
+    @include desktop-lg {
+        @content;
+    }
+}

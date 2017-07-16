@@ -12,6 +12,11 @@
     <title>Stavros Kortesas - Web Developer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- inject:css -->
+    <!-- endinject -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+
 </head>
 
 <body>
@@ -23,110 +28,127 @@
     <main>
 
         <!--Stavros Kortesas - Front End Developer - Section -->
-        <section>
-            <div>
-                <h1>I'm Stavros Kortesas</h1>
-                <h3>A Front-End Developer</h3>
-                <button type="button">View Projects</button>
+        <section class="slide slide-home">
+
+            <div class="slide__content slide__content-home">
+                <div>
+                    <h1>I'm Stavros Kortesas</h1>
+                    <h4>A Front-End Developer</h4>
+                    <button class="btn btn-white" type="button">View Projects</button>
+                </div>
+
+                <div>
+                    <button class="scroller"></button>
+                </div>
             </div>
 
-            <div>
-                <button class="scroller"></button>
-            </div>
+
+
         </section>
         <!--Stavros Kortesas - Front End Developer - Section /-->
 
 
         <!--About Me-->
-        <section>
+        <section class="slide slide-about">
 
-            <div>
+
+            <div class="profile-picture">
                 <img src="./src/img/stavros_kortesas.png" alt="stavros_kortesas">
             </div>
 
-            <div>
-                <h2>About Me</h2>
+            <div class="slide__content slide__content-about">
+                <div>
+                    <h2>About Me</h2>
 
-                <p>Proactively iterate enterprise opportunities via top-line internal or "organic" sources. Assertively architect
-                    high-payoff products before exceptional relationships. Quickly build viral architectures with open-source
-                    models. Efficiently reinvent leveraged infrastructures through state of the art testing procedures. Authoritatively
-                    plagiarize bricks-and-clicks experiences before 24/365 e-commerce. Enthusiastically leverage other's
-                    progressive strategic theme areas with excellent information. Synergistically cultivate progressive total
-                    linkage.
-                </p>
+                    <p>Proactively iterate enterprise opportunities via top-line internal or "organic" sources. Assertively
+                        architect high-payoff products before exceptional relationships. Quickly build viral architectures
+                        with open-source models. Efficiently reinvent leveraged infrastructures through state of the art
+                        testing procedures. Authoritatively plagiarize bricks-and-clicks experiences before 24/365 e-commerce.
+                        Enthusiastically leverage other's progressive strategic theme areas with excellent information. Synergistically
+                        cultivate progressive total linkage.
+                    </p>
+                </div>
+
+                <button class="btn btn-dark">Let's Talk</button>
             </div>
-
-            <button>Let's Talk</button>
 
 
         </section>
         <!--About Me /-->
 
         <!--Skills-->
-        <section>
-            <div>
+        <section class="slide">
+            <div class="slide__content">
                 <h2>Skillset</h2>
                 <p>
                     Throughout the past years cultivate team building systems before premium paradigms. Conveniently disintermediate process-centric
                     methodologies for backend growth strategies. Dramatically enhance bricks-and-clicks niches vis-a-vis
                     maintainable expertise. Distinctively architect reliable interfaces whereas equity invested results.
                 </p>
+
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="list">
+                            <div class="list__title">
+                                <h5>Development Skills</h5>
+                            </div>
+
+                            <div class="list__content">
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>jQuery</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="list">
+                            <div class="list__title">
+                                <h5>Project Management Skills</h5>
+                            </div>
+
+                            <div class="list__content">
+                                <ul>
+                                    <li>Github</li>
+                                    <li>BitBucket</li>
+                                    <li>Trello</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="list">
+                            <div class="list__title">
+                                <h5>Personal Skills</h5>
+                            </div>
+
+                            <div class="list__content">
+                                <ul>
+                                    <li>Guitar playing</li>
+                                    <li>Gaming</li>
+                                    <li>Travelling</li>
+                                    <li>Sleeping!</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <div>
-                <div>
-                    <h5>Development Skills</h5>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>Javascript</li>
-                        <li>jQuery</li>
-                        <li>Bootstrap</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div>
-                <div>
-                    <h5>Project Management Skills</h5>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>Github</li>
-                        <li>BitBucket</li>
-                        <li>Trello</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div>
-                <div>
-                    <h5>Personal Skills</h5>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>Guitar playing</li>
-                        <li>Gaming</li>
-                        <li>Travelling</li>
-                        <li>Sleeping!</li>
-                    </ul>
-                </div>
-
-            </div>
-
         </section>
         <!--Skills/-->
 
         <!--Portfolio-->
-        <section>
-            <div>
+        <section class="slide">
+            <div class="slide__content slide__content-portfolio">
                 <div>
                     <h2>Projects</h2>
                     <p>
@@ -136,65 +158,76 @@
                         users.
                     </p>
                 </div>
+            </div>
 
-                <div>
-                    <div>
+            <div class="projects">
+                <div class="masonry">
+                    <div class="masonry__item">
                         <img src="./src/img/project1.png" alt="project1">
                     </div>
-                    <div>
+                    <div class="masonry__item">
                         <img src="./src/img/project1.png" alt="project1">
                     </div>
-                    <div>
+                    <div class="masonry__item">
                         <img src="./src/img/project1.png" alt="project1">
                     </div>
-                    <div>
+                    <div class="masonry__item">
                         <img src="./src/img/project1.png" alt="project1">
                     </div>
-                    <div>
+                    <div class="masonry__item">
                         <img src="./src/img/project1.png" alt="project1">
                     </div>
                 </div>
-
             </div>
+
         </section>
         <!--Portfolio/-->
 
         <!--Contact-->
-        <section>
-            <div>
-                <h2>Contact</h2>
-                <p></p>
-            </div>
+        <section class="slide">
 
-            <div>
-                <h4>I'm Available for Hiring!</h4>
+            <div class="slide__content">
 
                 <div>
-                    <form>
-                        <input placeholder="Your Name*" type="text">
-                        <input placeholder="Your Email*" type="text">
-                        <textarea rows="10" placeholder="Share Your Thoughts*"></textarea>
-                        <input type="submit">
-                    </form>
+                    <h2>Contact</h2>
+                    <p>
+                        Energistically maintain fully tested technology vis-a-vis cooperative functionalities. Interactively predominate scalable
+                        schemas for ubiquitous scenarios. Dynamically monetize visionary sources vis-a-vis bricks-and-clicks
+                        schemas.
+                    </p>
                 </div>
 
-            </div>
+                <div>
+                    <h4>I'm Available for Hiring!</h4>
 
-            <div>
-                <h4>Get Me in Social NetWorks</h4>
+                    <div>
+                        <form>
+                            <input placeholder="Your Name*" type="text">
+                            <input placeholder="Your Email*" type="text">
+                            <textarea rows="10" placeholder="Share Your Thoughts*"></textarea>
+                            <input type="submit">
+                        </form>
+                    </div>
+
+                </div>
 
                 <div>
-                    <ul>
-                        <li>
-                            <span class="socicon-github"></span>
-                        </li>
-                        <li>
-                            <span class="socicon-stackoverflow"></span>
-                        </li>
-                        <li>
-                            <span class="socicon-linkedin"></span>
-                        </li>
-                    </ul>
+                    <h4>Get Me in Social NetWorks</h4>
+
+                    <div>
+                        <ul>
+                            <li>
+                                <span class="socicon-github"></span>
+                            </li>
+                            <li>
+                                <span class="socicon-stackoverflow"></span>
+                            </li>
+                            <li>
+                                <span class="socicon-linkedin"></span>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
@@ -204,7 +237,8 @@
 
     </main>
 
-
+    <!-- inject:js -->
+    <!-- endinject -->
     <!--End-->
 
 </body>

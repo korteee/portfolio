@@ -1,0 +1,31 @@
+@import '../variables';
+.list {
+    display: inline-block;
+    margin-top: 15px;
+    &__title {
+        h5 {
+            margin: 0;
+        }
+        padding:10px 15px;
+        border-left: 4px solid $dark;
+    }
+    &__content {
+        margin-top: 5px;
+        margin-left: 0;
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 15px;
+                    height: 1px;
+                    background-color: $dark;
+                    margin-right: 5px;
+                    margin-bottom: 2.5%;
+                }
+            }
+        }
+    }
+}
