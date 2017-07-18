@@ -1,0 +1,28 @@
+@import "./../variables";
+.form {
+   
+    &__input {
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: $dark;
+        padding: 5px 2px;
+        width: 100%;
+
+
+        &-left {
+            width:45%;
+        }
+
+        &-right {
+            width:45%;
+            margin-left:5%;
+        }
+
+        &-bottom {
+            margin-top:10%;
+        }
+
+        
+
+    }
+}

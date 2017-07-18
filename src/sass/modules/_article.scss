@@ -1,0 +1,20 @@
+@import "./../variables";
+@import "./../mixins";
+
+.article {
+    display:inline-block;
+
+    &__title {
+        font-size:200%;
+    }
+
+    &__content {
+        margin-top:5%;
+        font-size:120%;
+    }
+
+    &__button {
+        margin-top:5%;
+        font-size:120%;
+    }
+}

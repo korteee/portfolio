@@ -49,7 +49,7 @@
 
 
         <!--About Me-->
-        <section class="slide slide-about">
+        <section class="slide slide-about slide-grey">
 
 
             <div class="profile-picture">
@@ -57,19 +57,18 @@
             </div>
 
             <div class="slide__content slide__content-about">
-                <div>
-                    <h2>About Me</h2>
+                <div class="article">
+                    <h2 class="article__title">About Me</h2>
 
-                    <p>Proactively iterate enterprise opportunities via top-line internal or "organic" sources. Assertively
+                    <p class="article__content">Proactively iterate enterprise opportunities via top-line internal or "organic" sources. Assertively
                         architect high-payoff products before exceptional relationships. Quickly build viral architectures
                         with open-source models. Efficiently reinvent leveraged infrastructures through state of the art
                         testing procedures. Authoritatively plagiarize bricks-and-clicks experiences before 24/365 e-commerce.
                         Enthusiastically leverage other's progressive strategic theme areas with excellent information. Synergistically
                         cultivate progressive total linkage.
                     </p>
+                    <button class="btn btn-dark article__button">Let's Talk</button>
                 </div>
-
-                <button class="btn btn-dark">Let's Talk</button>
             </div>
 
 
@@ -79,16 +78,20 @@
         <!--Skills-->
         <section class="slide">
             <div class="slide__content">
-                <h2>Skillset</h2>
-                <p>
-                    Throughout the past years cultivate team building systems before premium paradigms. Conveniently disintermediate process-centric
-                    methodologies for backend growth strategies. Dramatically enhance bricks-and-clicks niches vis-a-vis
-                    maintainable expertise. Distinctively architect reliable interfaces whereas equity invested results.
-                </p>
+
+
+                <div class="article">
+                    <h2 class="article__title">Skillset</h2>
+                    <p class="article__content">
+                        Throughout the past years cultivate team building systems before premium paradigms. Conveniently disintermediate process-centric
+                        methodologies for backend growth strategies. Dramatically enhance bricks-and-clicks niches vis-a-vis
+                        maintainable expertise. Distinctively architect reliable interfaces whereas equity invested results.
+                    </p>
+                </div>
 
 
 
-                <div class="row">
+                <div class="row divider divider__normal">
                     <div class="col-md-4">
                         <div class="list">
                             <div class="list__title">
@@ -149,9 +152,9 @@
         <!--Portfolio-->
         <section class="slide">
             <div class="slide__content slide__content-portfolio">
-                <div>
-                    <h2>Projects</h2>
-                    <p>
+                <div class="article">
+                    <h2 class="article__title">Projects</h2>
+                    <p class="article__content">
                         Dramatically enhance bricks-and-clicks niches vis-a-vis maintainable expertise. Distinctively architect reliable interfaces
                         whereas equity invested results. Rapidiously empower go. Seamlessly parallel task standardized core
                         competencies with enterprise e-business. Objectively provide access to granular relationships without
@@ -184,58 +187,69 @@
         <!--Portfolio/-->
 
         <!--Contact-->
-        <section class="slide">
+        <section class="slide slide-contact">
 
             <div class="slide__content">
 
-                <div>
-                    <h2>Contact</h2>
-                    <p>
+                <div class="article">
+                    <h2 class="article__title">Contact</h2>
+                    <p class="article__content">
                         Energistically maintain fully tested technology vis-a-vis cooperative functionalities. Interactively predominate scalable
                         schemas for ubiquitous scenarios. Dynamically monetize visionary sources vis-a-vis bricks-and-clicks
                         schemas.
                     </p>
                 </div>
 
-                <div>
-                    <h4>I'm Available for Hiring!</h4>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <h4 class="divider divider__normal">I'm Available for Hiring!</h4>
 
-                    <div>
-                        <form>
-                            <input placeholder="Your Name*" type="text">
-                            <input placeholder="Your Email*" type="text">
-                            <textarea rows="10" placeholder="Share Your Thoughts*"></textarea>
-                            <input type="submit">
-                        </form>
+                        <div>
+                            <form class="form">
+                                <input class="form__input form__input-left" placeholder="Your Name*" type="text">
+                                <input class="form__input form__input-right" placeholder="Your Email*" type="text">
+                                <textarea class="form__input form__input-bottom no-resizable" rows="5" placeholder="Share Your Thoughts*"></textarea>
+                                <button class="btn btn-dark form__input-bottom" type="submit">Send Message</button>
+                            </form>
+                        </div>
+
                     </div>
 
-                </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 social">
+                        <h4 class="divider divider__normal">Get Me in Social Networks</h4>
 
-                <div>
-                    <h4>Get Me in Social NetWorks</h4>
+                        <div>
+                            <ul class="icon-links">
+                                <li class="icon-links__icon icon-links__icon-dark">
+                                    <a href="#">
+                                    <span class="socicon-github"></span>
+                                </a>
+                                </li>
+                                <li class="icon-links__icon icon-links__icon-dark">
+                                    <a href="#">
+                                    <span class="socicon-stackoverflow"></span>
+                                </a>
+                                </li>
+                                <li class="icon-links__icon icon-links__icon-dark">
+                                    <a href="#"> 
+                                    <span class="socicon-linkedin"></span>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div>
-                        <ul>
-                            <li>
-                                <span class="socicon-github"></span>
-                            </li>
-                            <li>
-                                <span class="socicon-stackoverflow"></span>
-                            </li>
-                            <li>
-                                <span class="socicon-linkedin"></span>
-                            </li>
-                        </ul>
                     </div>
-
                 </div>
 
             </div>
 
         </section>
         <!--Contact/-->
-
     </main>
+
+    <footer>
+        <small>© 2016. All rights reserved.</small>
+    </footer>
 
     <!-- inject:js -->
     <!-- endinject -->

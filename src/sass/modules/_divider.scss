@@ -1,0 +1,39 @@
+@import "./../mixins";
+.divider {
+    display: block;
+    &__small {
+        @include desktop {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+    &__normal {
+        @include desktop {
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+
+        @include tablet-p-l{
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        margin-top:10%;
+        margin-bottom:10%;
+    }
+    &__big {
+        @include desktop {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        @include tablet-p-l{
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+        margin-top:15%;
+        margin-bottom:15%;
+    }
+}

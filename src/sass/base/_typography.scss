@@ -1,32 +1,72 @@
 @import "./../mixins";
 @import "./../variables";
-
 @font-face {
-    font-family:"Roboto-Regular";
+    font-family: "Roboto-Regular";
     src: url('./../fonts/Roboto-Regular.ttf')
 }
 
 @font-face {
-    font-family:"Avenir-Black";
+    font-family: "Avenir-Black";
     src: url('./../fonts/AvenirLTStd-Black.otf')
 }
 
-body {
-    font-family:$textFont;
-    font-size:12px;
-
-    @include desktop {
-        font-size:16px;
-    }
-    
-    
+@font-face {
+    font-family: "Socicon";
+    src: url('./../fonts/Socicon.ttf');
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: $headFont; color:$dark ; letter-spacing:2px; }
-h1, h2 { line-height: 1.1; }
-h3, h4 { line-height: 1.3; }
-h1 { font-size: 250%; }
-h2 { font-size: 200%; }
-h3 { font-size: 200%; }
-h4 { font-size: 180%; }
-h5 { font-size: 130%; }
+@font-face {
+    font-family: "Avenir-Roman";
+    src: url('./../fonts/AvenirLTStd-Roman.otf')
+}
+
+body {
+    font-family: $textFont;
+    font-size: 11px;
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark;
+    letter-spacing: 2px;
+}
+
+h1,
+h2 {
+    line-height: 1.1;
+    font-family: $headFont;
+}
+
+h3,
+h4 {
+    line-height: 1.3;
+    font-family: $head2Font;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h3 {
+    font-size: 200%;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 180%;
+}
+
+h5 {
+    font-size: 130%;
+}

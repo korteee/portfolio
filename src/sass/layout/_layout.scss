@@ -1,3 +1,12 @@
 @import "./../mixins";
 @import "./../variables";
-
+footer {
+    height: 5vh;
+    position: relative;
+    small {
+        position: absolute;
+        left: 50%;
+        bottom: 20%;
+        transform:translate(-50%, 0);
+    }
+}

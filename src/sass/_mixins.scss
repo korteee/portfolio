@@ -1,5 +1,13 @@
 @import "./variables";
 
+/** Transition **/
+
+@mixin transition {
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+
 /** Img Responsive **/
 
 @mixin img-responsive {

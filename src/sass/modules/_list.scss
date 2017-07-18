@@ -16,6 +16,11 @@
             list-style-type: none;
             li {
                 position: relative;
+
+                &:not(:last-child) {
+                    margin-bottom:5%;
+                }
+
                 &:before {
                     content: '';
                     display: inline-block;

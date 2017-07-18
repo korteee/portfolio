@@ -1,9 +1,13 @@
+@import "./../variables";
+@import "./../mixins";
 .slide {
     // width: 100%;
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    
+    &-grey {
+        background-color: $grey;
+    }
     &-home {
         background: url('./../img/desk.jpg');
         background-position: center;
@@ -20,17 +24,15 @@
         }
     }
     &-about {
-
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-
         .profile-picture {
             height: 40%;
             width: 100%;
             overflow: hidden;
             position: relative;
-            order:1;
+            order: 1;
             img {
                 height: auto;
                 width: 100%;
@@ -38,25 +40,46 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
+                @include desktop {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            @include desktop {
+                width: 50%;
+                height: 100%;
+            }
+        }
+        @include desktop {
+            flex-direction: row-reverse;
+            position: relative;
+        }
+    }
+    &-portfolio {
+        .projects {
+            height: 60%;
+        }
+    }
+    &-contact {
+        height: 95vh;
+        @include desktop {
+            .social {
+                text-align: right;
+                .icon-links {
+                    display: inline-block;
+                }
             }
         }
     }
-
-    &-portfolio {
-        .projects {
-            height:60%;
-        }
-    }
-
     &__content {
-        padding: 10%;
+        padding: 5% 10%;
         width: 100%;
         box-sizing: border-box;
         &-home {
             position: absolute;
-            top: 80%;
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, -80%);
+            transform: translate(-50%, -50%);
             text-align: center;
             button:not(.scroller) {
                 margin-top: 15px;
@@ -64,10 +87,16 @@
         }
         &-about {
             float: left;
-            height:60%;
+            height: 60%;
+            @include desktop {
+                width: 50%;
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%)
+            }
         }
         &-portfolio {
-            height:40%;
+            height: 40%;
         }
     }
 }

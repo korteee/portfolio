@@ -1,0 +1,44 @@
+@import "../variables";
+@import "../mixins";
+.icon-links {
+    list-style-type: none;
+    column-count: 2;
+    column-gap: 1px;
+    @include desktop {
+        column-count: 1;
+    }
+    &__icon {
+        font-size: 200%;
+        width: 100%;
+        &-dark {
+            a {
+                color: $dark;
+            }
+        }
+        a {
+            display: inline-block;
+            padding: 0 0 15px;
+            &:hover,
+            &:focus,
+            &:active {
+                color: darken($dark, 20%);
+                text-decoration: none;
+            }
+            &:hover {
+                &:after {
+                    width: 3vw;
+                }
+            }
+            &:after {
+                content: '';
+                display: inline-block;
+                margin-bottom: 10px;
+                margin-left: 5px;
+                height: 1px;
+                width: 15px;
+                background-color: $dark;
+                @include transition;
+            }
+        }
+    }
+}
