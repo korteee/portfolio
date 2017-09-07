@@ -1,0 +1,46 @@
+@import "../variables";
+@import "../mixins";
+.img-overlay {
+    @include background-opacity($dark, 0.9);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    opacity: 0;
+    text-align: center;
+    &+img {
+        @include transition;
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+        &+img {
+            width: 120%;
+        }
+        .img-overlay__content {
+            opacity: 1;
+            margin-top: 35%;
+        }
+    }
+    &__content {
+        margin-bottom: -35%;
+        @include transition;
+        text-align: center;
+        opacity: 0;
+        display: inline-block;
+        &-white * {
+            color: $white;
+        }
+    }
+    &__title {
+        font-size: 100%;
+        &:after {
+            content: '';
+            display: block;
+            width: 25%;
+            height: 2px;
+            background-color: $white;
+            margin: 10px auto;
+        }
+    }
+}

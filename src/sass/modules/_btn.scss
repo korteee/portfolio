@@ -10,7 +10,8 @@ button.btn {
 
     @include transition;
 
-    &-dark {
+    &-dark,
+    &-white:focus {
         border-color: $dark;
         color: $dark;
         &:hover {
@@ -19,7 +20,8 @@ button.btn {
             border-color: $white;
         }
     }
-    &-white {
+    &-white,
+    &-white:focus {
         border-color: $white;
         color: $white;
         &:hover {

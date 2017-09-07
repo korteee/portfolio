@@ -1,0 +1,53 @@
+@import "../_mixins";
+@import "../variables";
+#scroll-slider-wrapper {
+    overflow: hidden;
+    width: 50vw;
+    height: 100%;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+.slider {
+    z-index: 3;
+    width: 100vw;
+    height: 100%;
+    user-select: none;
+    margin: 0 auto;
+    &__slide {
+        width: 50vw;
+        height: 100%;
+        float: left;
+    }
+    &__controls {
+        &-left,
+        &-right {
+            border: none;
+            padding:5px 10px !important;
+            position: absolute;
+            top: 50%;
+            font-size:200%;
+            transform: translate(0, -50%);
+        }
+        &-left {
+            left: -1px;
+            border-bottom-left-radius:0 !important;
+            border-top-left-radius: 0 !important;
+            &:after {
+                content: '‹';
+                height:38px;
+                display:block;
+            }
+        }
+        &-right {
+            right: -1px;
+            border-bottom-right-radius:0 !important;
+            border-top-right-radius: 0 !important;
+            &:after {
+                content: '›';
+                height:38px;
+                display:block;
+            }
+        }
+    }
+}

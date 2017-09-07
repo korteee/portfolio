@@ -1,0 +1,17 @@
+.project-description {
+    @extend .row;
+    @extend .divider;
+    @extend .divider__15;
+    &__details {
+        @extend .col-md-8;
+        &-title {
+            @extend .list__title;
+        }
+        &-content {
+            margin-top: 10px;
+        }
+    }
+    &__technologies {
+        @extend .col-md-4;
+    }
+}

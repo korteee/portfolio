@@ -7,7 +7,11 @@
 
 @font-face {
     font-family: "Avenir-Black";
-    src: url('./../fonts/AvenirLTStd-Black.otf')
+    src: 
+        url('./../fonts/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'), 
+         url('./../fonts/AvenirLTStd-Black.woff') format('woff'), 
+         url('./../fonts/AvenirLTStd-Black.ttf')  format('truetype'),
+         url('./../fonts/AvenirLTStd-Black.svg#svgFontName') format('svg');
 }
 
 @font-face {
@@ -17,12 +21,18 @@
 
 @font-face {
     font-family: "Avenir-Roman";
-    src: url('./../fonts/AvenirLTStd-Roman.otf')
+    src: url('./../fonts/AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'), 
+         url('./../fonts/AvenirLTStd-Roman.woff') format('woff'), 
+         url('./../fonts/AvenirLTStd-Roman.ttf')  format('truetype'),
+         url('./../fonts/AvenirLTStd-Roman.svg#svgFontName') format('svg');
 }
 
 body {
     font-family: $textFont;
     font-size: 11px;
+    @include tablet-p-l {
+        font-size:14px;
+    }
     @include desktop {
         font-size: 16px;
     }

@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html lang="en">
 <!--<![endif]-->
 
 <head>
@@ -12,248 +12,511 @@
     <title>Stavros Kortesas - Web Developer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
 
     <!-- inject:css -->
+    <link rel="stylesheet" href="dist/styles.css">
     <!-- endinject -->
-    <link rel="stylesheet" href="./src/css/styles.css">
 
 </head>
 
-<body>
+<body scroll="no">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
-    <main>
-
-        <!--Stavros Kortesas - Front End Developer - Section -->
-        <section class="slide slide-home">
-
-            <div class="slide__content slide__content-home">
-                <div>
-                    <h1>I'm Stavros Kortesas</h1>
-                    <h4>A Front-End Developer</h4>
-                    <button class="btn btn-white" type="button">View Projects</button>
-                </div>
-
-                <div>
-                    <button class="scroller"></button>
-                </div>
-            </div>
+    <nav class="menu">
+        <button class="menu-toggle-button"></button>
+        <ul class="menu__list">
+            <li><a id="home-button" class="menu__item menu__item-active" href="#">Home</a></li>
+            <li><a id="about-button" class="menu__item" href="#">About</a></li>
+            <li><a id="skills-button" class="menu__item" href="#">Skillset</a></li>
+            <li><a id="projects-button" class="menu__item" href="#">Projects</a></li>
+            <li><a id="contact-button" class="menu__item" href="#">Contact</a></li>
+        </ul>
+    </nav>
 
 
+    <div id="wrapper">
+        <main>
 
-        </section>
-        <!--Stavros Kortesas - Front End Developer - Section /-->
+            <!--Stavros Kortesas - Front End Developer - Section -->
+            <section id="home" class="slide slide-home">
 
+                <div class="slide__content slide__content-home">
+                    <div>
+                        <h1>I'm Stavros Kortesas</h1>
+                        <h4>A Front-End Developer</h4>
+                        <button id="viewProjectsButton" class="btn btn-white" type="button">View Projects</button>
+                    </div>
 
-        <!--About Me-->
-        <section class="slide slide-about slide-grey">
-
-
-            <div class="profile-picture">
-                <img src="./src/img/stavros_kortesas.png" alt="stavros_kortesas">
-            </div>
-
-            <div class="slide__content slide__content-about">
-                <div class="article">
-                    <h2 class="article__title">About Me</h2>
-
-                    <p class="article__content">Proactively iterate enterprise opportunities via top-line internal or "organic" sources. Assertively
-                        architect high-payoff products before exceptional relationships. Quickly build viral architectures
-                        with open-source models. Efficiently reinvent leveraged infrastructures through state of the art
-                        testing procedures. Authoritatively plagiarize bricks-and-clicks experiences before 24/365 e-commerce.
-                        Enthusiastically leverage other's progressive strategic theme areas with excellent information. Synergistically
-                        cultivate progressive total linkage.
-                    </p>
-                    <button class="btn btn-dark article__button">Let's Talk</button>
-                </div>
-            </div>
-
-
-        </section>
-        <!--About Me /-->
-
-        <!--Skills-->
-        <section class="slide">
-            <div class="slide__content">
-
-
-                <div class="article">
-                    <h2 class="article__title">Skillset</h2>
-                    <p class="article__content">
-                        Throughout the past years cultivate team building systems before premium paradigms. Conveniently disintermediate process-centric
-                        methodologies for backend growth strategies. Dramatically enhance bricks-and-clicks niches vis-a-vis
-                        maintainable expertise. Distinctively architect reliable interfaces whereas equity invested results.
-                    </p>
+                    <div>
+                        <button id="scroller" class="scroller"></button>
+                    </div>
                 </div>
 
 
 
-                <div class="row divider divider__normal">
-                    <div class="col-md-4">
-                        <div class="list">
-                            <div class="list__title">
-                                <h5>Development Skills</h5>
+            </section>
+            <!--Stavros Kortesas - Front End Developer - Section /-->
+
+
+            <!--About Me-->
+            <section id="about" class="slide slide-about slide-grey">
+
+
+                <div class="profile-picture">
+                    <img src="./src/img/stavros_kortesas.png" alt="stavros_kortesas">
+                </div>
+
+                <div class="slide__content slide__content-about">
+                    <div class="article">
+                        <h2 class="article__title">About Me</h2>
+
+                        <p class="article__content">Proactively iterate enterprise opportunities via top-line internal or "organic" sources. Assertively
+                            architect high-payoff products before exceptional relationships. Quickly build viral architectures
+                            with open-source models. Efficiently reinvent leveraged infrastructures through state of the
+                            art testing procedures. Authoritatively plagiarize bricks-and-clicks experiences before 24/365
+                            e-commerce. Enthusiastically leverage other's progressive strategic theme areas with excellent
+                            information. Synergistically cultivate progressive total linkage.
+                        </p>
+                        <button id="letsTalkButton" class="btn btn-dark article__button">Let's Talk</button>
+                    </div>
+                </div>
+
+
+            </section>
+            <!--About Me /-->
+
+            <!--Skills-->
+            <section id="skills" class="slide slide-white">
+                <div class="slide__content">
+
+
+                    <div class="article slide__content-top">
+                        <h2 class="article__title">Skillset</h2>
+                        <p class="article__content">
+                            Throughout the past years cultivate team building systems before premium paradigms. Conveniently disintermediate process-centric
+                            methodologies for backend growth strategies. Dramatically enhance bricks-and-clicks niches vis-a-vis
+                            maintainable expertise. Distinctively architect reliable interfaces whereas equity invested results.
+                        </p>
+                    </div>
+
+
+
+                    <div class="row divider divider__small">
+                        <div class="col-md-4">
+                            <div class="list">
+                                <div class="list__title">
+                                    <h5>Development Skills</h5>
+                                </div>
+
+                                <div class="list__content">
+                                    <ul>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>Javascript</li>
+                                        <li>jQuery</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </div>
+
                             </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list">
+                                <div class="list__title">
+                                    <h5>Project Management Skills</h5>
+                                </div>
 
-                            <div class="list__content">
-                                <ul>
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>Javascript</li>
-                                    <li>jQuery</li>
-                                    <li>Bootstrap</li>
-                                </ul>
+                                <div class="list__content">
+                                    <ul>
+                                        <li>Github</li>
+                                        <li>BitBucket</li>
+                                        <li>Trello</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list">
+                                <div class="list__title">
+                                    <h5>Personal Skills</h5>
+                                </div>
+
+                                <div class="list__content">
+                                    <ul>
+                                        <li>Guitar playing</li>
+                                        <li>Gaming</li>
+                                        <li>Travelling</li>
+                                        <li>Sleeping!</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!--Skills/-->
+
+            <!--projects-->
+            <section id="projects" class="slide slide-portfolio slide-grey">
+                <div class="slide__content slide__content-portfolio">
+                    <div class="article slide__content-top">
+                        <h2 class="article__title">Projects</h2>
+                        <p class="article__content">
+                            Dramatically enhance bricks-and-clicks niches vis-a-vis maintainable expertise. Distinctively architect reliable interfaces
+                            whereas equity invested results. Rapidiously empower go. Seamlessly parallel task standardized
+                            core competencies with enterprise e-business. Objectively provide access to granular relationships
+                            without users.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="projects">
+                    <div class="masonry">
+                        <div class="masonry__item">
+
+                            <div class="img-overlay">
+                                <div class="img-overlay__content img-overlay__content-white">
+                                    <h6 class="img-overlay__title">
+                                        Web Design for Apple
+                                    </h6>
+                                    <small class="img-overlay__description">Click for details</small>
+                                </div>
+                            </div>
+                            <img src="./src/img/project1.png" alt="project1">
+
+
+                        </div>
+
+                        <div class="masonry__item">
+
+                            <div class="img-overlay">
+                                <div class="img-overlay__content img-overlay__content-white">
+                                    <h6 class="img-overlay__title">
+                                        Web Design for Apple
+                                    </h6>
+                                    <small class="img-overlay__description">Click for details</small>
+                                </div>
+                            </div>
+                            <img src="./src/img/project1.png" alt="project1">
+
+
+                        </div>
+                        <div class="masonry__item">
+
+                            <div class="img-overlay">
+                                <div class="img-overlay__content img-overlay__content-white">
+                                    <h6 class="img-overlay__title">
+                                        Web Design for Apple
+                                    </h6>
+                                    <small class="img-overlay__description">Click for details</small>
+                                </div>
+                            </div>
+                            <img src="./src/img/project1.png" alt="project1">
+
+
+                        </div>
+                        <div class="masonry__item">
+
+                            <div class="img-overlay">
+                                <div class="img-overlay__content img-overlay__content-white">
+                                    <h6 class="img-overlay__title">
+                                        Web Design for Apple
+                                    </h6>
+                                    <small class="img-overlay__description">Click for details</small>
+                                </div>
+                            </div>
+                            <img src="./src/img/project1.png" alt="project1">
+
+
+                        </div>
+                        <div class="masonry__item">
+
+                            <div class="img-overlay">
+                                <div class="img-overlay__content img-overlay__content-white">
+                                    <h6 class="img-overlay__title">
+                                        Web Design for Apple
+                                    </h6>
+                                    <small class="img-overlay__description">Click for details</small>
+                                </div>
+                            </div>
+                            <img src="./src/img/project1.png" alt="project1">
+
+
+                        </div>
+                        <div class="masonry__item">
+
+                            <div class="img-overlay">
+                                <div class="img-overlay__content img-overlay__content-white">
+                                    <h6 class="img-overlay__title">
+                                        Web Design for Apple
+                                    </h6>
+                                    <small class="img-overlay__description">Click for details</small>
+                                </div>
+                            </div>
+                            <img src="./src/img/project1.png" alt="project1">
+
+
+                        </div>
+                        <div class="masonry__item">
+
+                            <div class="img-overlay">
+                                <div class="img-overlay__content img-overlay__content-white">
+                                    <h6 class="img-overlay__title">
+                                        Web Design for Apple
+                                    </h6>
+                                    <small class="img-overlay__description">Click for details</small>
+                                </div>
+                            </div>
+                            <img src="./src/img/project1.png" alt="project1">
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </section>
+            <!--Portfolio/-->
+
+            <!--Contact-->
+            <section id="contact" class="slide slide-white slide-contact">
+
+                <div class="slide__content">
+
+                    <div class="article slide__content-contact slide__content-top">
+                        <h2 class="article__title">Contact</h2>
+                        <p class="article__content">
+                            Energistically maintain fully tested technology vis-a-vis cooperative functionalities. Interactively predominate scalable
+                            schemas for ubiquitous scenarios. Dynamically monetize visionary sources vis-a-vis bricks-and-clicks
+                            schemas.
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <h4 class="divider divider__normal">I'm Available for Hiring!</h4>
+
+                            <div>
+                                <form class="form">
+                                    <input class="form__input form__input-left" placeholder="Your Name*" type="text">
+                                    <input class="form__input form__input-right" placeholder="Your Email*" type="text">
+                                    <textarea class="form__input form__input-bottom no-resizable" rows="5" placeholder="Share Your Thoughts*"></textarea>
+                                    <button class="btn btn-dark form__input-bottom" type="submit">Send Message</button>
+                                </form>
                             </div>
 
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="list">
-                            <div class="list__title">
-                                <h5>Project Management Skills</h5>
-                            </div>
 
-                            <div class="list__content">
-                                <ul>
-                                    <li>Github</li>
-                                    <li>BitBucket</li>
-                                    <li>Trello</li>
-                                </ul>
-                            </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 social">
+                            <h4 class="divider divider__normal">Get Me in Social Networks</h4>
 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="list">
-                            <div class="list__title">
-                                <h5>Personal Skills</h5>
-                            </div>
-
-                            <div class="list__content">
-                                <ul>
-                                    <li>Guitar playing</li>
-                                    <li>Gaming</li>
-                                    <li>Travelling</li>
-                                    <li>Sleeping!</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!--Skills/-->
-
-        <!--Portfolio-->
-        <section class="slide">
-            <div class="slide__content slide__content-portfolio">
-                <div class="article">
-                    <h2 class="article__title">Projects</h2>
-                    <p class="article__content">
-                        Dramatically enhance bricks-and-clicks niches vis-a-vis maintainable expertise. Distinctively architect reliable interfaces
-                        whereas equity invested results. Rapidiously empower go. Seamlessly parallel task standardized core
-                        competencies with enterprise e-business. Objectively provide access to granular relationships without
-                        users.
-                    </p>
-                </div>
-            </div>
-
-            <div class="projects">
-                <div class="masonry">
-                    <div class="masonry__item">
-                        <img src="./src/img/project1.png" alt="project1">
-                    </div>
-                    <div class="masonry__item">
-                        <img src="./src/img/project1.png" alt="project1">
-                    </div>
-                    <div class="masonry__item">
-                        <img src="./src/img/project1.png" alt="project1">
-                    </div>
-                    <div class="masonry__item">
-                        <img src="./src/img/project1.png" alt="project1">
-                    </div>
-                    <div class="masonry__item">
-                        <img src="./src/img/project1.png" alt="project1">
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!--Portfolio/-->
-
-        <!--Contact-->
-        <section class="slide slide-contact">
-
-            <div class="slide__content">
-
-                <div class="article">
-                    <h2 class="article__title">Contact</h2>
-                    <p class="article__content">
-                        Energistically maintain fully tested technology vis-a-vis cooperative functionalities. Interactively predominate scalable
-                        schemas for ubiquitous scenarios. Dynamically monetize visionary sources vis-a-vis bricks-and-clicks
-                        schemas.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6">
-                        <h4 class="divider divider__normal">I'm Available for Hiring!</h4>
-
-                        <div>
-                            <form class="form">
-                                <input class="form__input form__input-left" placeholder="Your Name*" type="text">
-                                <input class="form__input form__input-right" placeholder="Your Email*" type="text">
-                                <textarea class="form__input form__input-bottom no-resizable" rows="5" placeholder="Share Your Thoughts*"></textarea>
-                                <button class="btn btn-dark form__input-bottom" type="submit">Send Message</button>
-                            </form>
-                        </div>
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-6 social">
-                        <h4 class="divider divider__normal">Get Me in Social Networks</h4>
-
-                        <div>
-                            <ul class="icon-links">
-                                <li class="icon-links__icon icon-links__icon-dark">
-                                    <a href="#">
+                            <div>
+                                <ul class="icon-links">
+                                    <li class="icon-links__icon icon-links__icon-dark">
+                                        <a href="#">
                                     <span class="socicon-github"></span>
                                 </a>
-                                </li>
-                                <li class="icon-links__icon icon-links__icon-dark">
-                                    <a href="#">
+                                    </li>
+                                    <li class="icon-links__icon icon-links__icon-dark">
+                                        <a href="#">
                                     <span class="socicon-stackoverflow"></span>
                                 </a>
-                                </li>
-                                <li class="icon-links__icon icon-links__icon-dark">
-                                    <a href="#"> 
+                                    </li>
+                                    <li class="icon-links__icon icon-links__icon-dark">
+                                        <a href="#"> 
                                     <span class="socicon-linkedin"></span>
                                 </a>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!--Contact/-->
+        </main>
+        <footer>
+            <small>© 2016. All rights reserved.</small>
+        </footer>
+    </div>
+
+    <div id="projects-modal" class="my-modal">
+
+        <div class="my-modal__content">
+
+            <button id="projects-modal-close" class="btn btn-dark my-modal__content-close"></button>
+
+            <div class="slider__controls">
+                <button id="prev-project-button" class="btn btn-dark slider__controls-left"></button>
+                <button id="next-project-button" class="btn btn-dark slider__controls-right"></button>
+            </div>
+
+            <div id="scroll-slider-wrapper">
+
+                <div class="slider">
+
+                    <div class="slider__slide">
+                        <div class="my-modal__content-header">
+                            <h3>This is a header</h3>
                         </div>
 
+                        <div class="my-modal__content-body">
+
+                            <ul class="info-list divider divider__15">
+                                <li class="info-list__item">
+                                    <span class="info-list__item-key">Client:</span>
+                                    <span class="info-list__item-value">Apple</span>
+                                </li>
+                                <li class="info-list__item">
+                                    <span class="info-list__item-key">Project Type:</span>
+                                    <span class="info-list__item-value">Web Development</span>
+                                </li>
+                                <li class="info-list__item">
+                                    <span class="info-list__item-key">Project Url:</span>
+                                    <span class="info-list__item-value">
+                            <a href="#">Some Url</a>
+                        </span>
+                                </li>
+                            </ul>
+
+                            <div class="img-wrapper">
+                                <img src="./src/img/modal-image.png" alt="project-image">
+                            </div>
+
+                            <div class="project-description">
+
+                                <div class="project-description__details list">
+                                    <div class="project-description__details-title">
+                                        <h5>
+                                            Project Details
+                                        </h5>
+                                    </div>
+                                    <p class="project-description__details-content">
+                                        Occaecat id aliquip enim ea exercitation ea eiusmod velit. Ad veniam officia duis sint laboris elit esse incididunt duis
+                                        ex qui enim laboris. Nostrud et amet ea non fugiat mollit proident ex excepteur voluptate
+                                        duis. Officia fugiat eu proident nostrud anim nisi ullamco nisi sint consequat veniam
+                                        cillum in deserunt.
+                                    </p>
+                                </div>
+
+                                <div class="project-description__technologies list">
+                                    <div class="list__title">
+                                        <h5>Technologies Used</h5>
+                                    </div>
+                                    <div class="list__content">
+                                        <ul>
+                                            <li>HTML5</li>
+                                            <li>CSS3</li>
+                                            <li>Bootstrap</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="my-modal__content-footer">
+                            This is the footer
+                        </div>
                     </div>
+
+                    <div class="slider__slide">
+                        <div class="my-modal__content-header">
+                            <h3>This is a header 2</h3>
+                        </div>
+
+                        <div class="my-modal__content-body">
+
+                            <ul class="info-list divider divider__15">
+                                <li class="info-list__item">
+                                    <span class="info-list__item-key">Client:</span>
+                                    <span class="info-list__item-value">Apple</span>
+                                </li>
+                                <li class="info-list__item">
+                                    <span class="info-list__item-key">Project Type:</span>
+                                    <span class="info-list__item-value">Web Development</span>
+                                </li>
+                                <li class="info-list__item">
+                                    <span class="info-list__item-key">Project Url:</span>
+                                    <span class="info-list__item-value">
+                            <a href="#">Some Url</a>
+                        </span>
+                                </li>
+                            </ul>
+
+                            <div class="img-wrapper">
+                                <img src="./src/img/modal-image.png" alt="project-image">
+                            </div>
+
+                            <div class="project-description">
+
+                                <div class="project-description__details list">
+                                    <div class="project-description__details-title">
+                                        <h5>
+                                            Project Details
+                                        </h5>
+                                    </div>
+                                    <p class="project-description__details-content">
+                                        Occaecat id aliquip enim ea exercitation ea eiusmod velit. Ad veniam officia duis sint laboris elit esse incididunt duis
+                                        ex qui enim laboris. Nostrud et amet ea non fugiat mollit proident ex excepteur voluptate
+                                        duis. Officia fugiat eu proident nostrud anim nisi ullamco nisi sint consequat veniam
+                                        cillum in deserunt.
+                                    </p>
+                                </div>
+
+                                <div class="project-description__technologies list">
+                                    <div class="list__title">
+                                        <h5>Technologies Used</h5>
+                                    </div>
+                                    <div class="list__content">
+                                        <ul>
+                                            <li>HTML5</li>
+                                            <li>CSS3</li>
+                                            <li>Bootstrap</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="my-modal__content-footer">
+                            This is the footer
+                        </div>
+                    </div>
+
+
                 </div>
 
             </div>
 
-        </section>
-        <!--Contact/-->
-    </main>
+        </div>
 
-    <footer>
-        <small>© 2016. All rights reserved.</small>
-    </footer>
+    </div>
+
+
 
     <!-- inject:js -->
+    <script src="dist/scripts.js"></script>
     <!-- endinject -->
     <!--End-->
+
+
 
 </body>
 

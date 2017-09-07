@@ -1,12 +1,18 @@
 @import "./../variables";
 @import "./../mixins";
 .slide {
-    // width: 100%;
+    width: 100%;
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    z-index:2;
+
+
     &-grey {
         background-color: $grey;
+    }
+    &-white {
+        background-color: $white;
     }
     &-home {
         background: url('./../img/desk.jpg');
@@ -28,7 +34,7 @@
         flex-direction: column;
         align-items: flex-start;
         .profile-picture {
-            height: 40%;
+            height: 35%;
             width: 100%;
             overflow: hidden;
             position: relative;
@@ -40,24 +46,47 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                @include desktop {
+                @include desktop-lg {
+                    height: auto;
+                    width: 100%;
+                }
+                @include desktop-md  {
                     height: 100%;
                     width: auto;
                 }
+                @include desktop-sm {
+                    height:100%;
+                    width:auto;
+                }
             }
+
+            @include mobile-l {
+                display: none;
+            }
+
             @include desktop {
                 width: 50%;
                 height: 100%;
+                display:block;
             }
+
+            
+
+          
         }
         @include desktop {
             flex-direction: row-reverse;
             position: relative;
         }
+        
     }
     &-portfolio {
         .projects {
             height: 60%;
+
+            @include tablet-l {
+                height:48%
+            }
         }
     }
     &-contact {
@@ -84,19 +113,63 @@
             button:not(.scroller) {
                 margin-top: 15px;
             }
+
+            @include mobile-l {
+                transform: translate(-50%,-20%)
+            }
+
+            @include mobile-p-l {
+                transform: translate(-50%, -50%);
+            }
+
+            @include desktop {
+                transform:translate(-50%, -50%);
+            }
+
+            @include tablet-p-l {
+                transform: translate(-50%, -50%);
+            }
+
         }
         &-about {
             float: left;
-            height: 60%;
+            height: 75%;
             @include desktop {
                 width: 50%;
                 position: relative;
                 top: 50%;
                 transform: translate(0, -50%)
             }
+            @include tablet-l {
+                height:100%;
+            }
+            @include mobile-l {
+                height:100%;
+            }
         }
         &-portfolio {
             height: 40%;
+
+            @include tablet-l {
+                height:52%
+            }
+        }
+        &-top {
+            @include desktop {
+                width: 50%;
+            }
+        }
+
+        &-contact {
+            .article__content {
+                display:none;
+                @include desktop {
+                    display: block;
+                }
+                @include tablet-p-l {
+                    display:block;
+                }
+            }
         }
     }
 }

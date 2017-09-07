@@ -8,6 +8,11 @@ h5 {
     margin-top: 0;
 }
 
-* {
+button:focus {
+    outline: 0 !important;
+}
+
+*,
+*:focus {
     outline: none;
 }

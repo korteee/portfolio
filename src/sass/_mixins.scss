@@ -1,5 +1,22 @@
 @import "./variables";
 
+/**Landscape Orientation for Devies**/
+
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+
+/** Background Opacity **/
+
+@mixin background-opacity($color, $opacity: 1) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+
 /** Transition **/
 
 @mixin transition {
@@ -16,6 +33,15 @@
 }
 
 
+/* iPhone 6 ----------- */
+
+@mixin iPhone6-l {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+        @content;
+    }
+}
+
+
 /* Smartphones (portrait and landscape) ----------- */
 
 @mixin mobile-p-l {
@@ -28,7 +54,7 @@
 /* Smartphones (landscape) ----------- */
 
 @mixin mobile-l {
-    @media only screen and (min-width: 321px) {
+    @media only screen and (min-device-width: 321px) and (orientation: landscape){
         @content;
     }
 }
@@ -70,15 +96,13 @@
 }
 
 
-/**********
-Small Desktop
-**********/
+/********** Small Desktop **********/
 
 @mixin desktop-sm {
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
         @content;
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
         @content;
     }
 }
