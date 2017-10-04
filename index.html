@@ -16,7 +16,7 @@
 
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="dist/styles.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
     <!-- endinject -->
 
 </head>
@@ -52,7 +52,7 @@
                     </div>
 
                     <div>
-                        <button id="scroller" class="scroller"></button>
+                        <button id="scroller" class="scroller" type="button"></button>
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@
 
 
 
-                    <div class="row divider divider__small">
+                    <div class="row divider divider__small hidden-landscape">
                         <div class="col-md-4">
                             <div class="list">
                                 <div class="list__title">
@@ -177,7 +177,7 @@
                     </div>
                 </div>
 
-                <div class="projects">
+                <div class="projects  hidden-landscape">
                     <div class="masonry">
                         <div class="masonry__item">
 
@@ -306,36 +306,55 @@
                         <div class="col-xs-12 col-sm-12 col-md-6">
                             <h4 class="divider divider__normal">I'm Available for Hiring!</h4>
 
-                            <div>
-                                <form class="form">
-                                    <input class="form__input form__input-left" placeholder="Your Name*" type="text">
-                                    <input class="form__input form__input-right" placeholder="Your Email*" type="text">
-                                    <textarea class="form__input form__input-bottom no-resizable" rows="5" placeholder="Share Your Thoughts*"></textarea>
-                                    <button class="btn btn-dark form__input-bottom" type="submit">Send Message</button>
-                                </form>
-                            </div>
+                            <form class="form">
+                                <input class="form__input form__input-left" placeholder="Your Name*" type="text">
+                                <input class="form__input form__input-right" placeholder="Your Email*" type="text">
+                                <textarea class="form__input form__input-bottom no-resizable" rows="5" placeholder="Share Your Thoughts*"></textarea>
+                                <button class="btn btn-dark form__input-bottom" type="submit">Send Message</button>
+
+                                <ul class="inline-list inline-list-right icon-link hidden-portrait">
+                                    <li class="inline-list__item icon-links__icon icon-links__icon-dark icon-links__icon-clear">
+                                        <a href="#">
+                                            <span class="socicon-github"></span>
+                                        </a>
+                                    </li>
+
+                                    <li class="inline-list__item icon-links__icon icon-links__icon-dark icon-links__icon-clear">
+                                        <a href="#">
+                                            <span class="socicon-stackoverflow"></span>
+                                        </a>
+                                    </li>
+
+                                    <li class="inline-list__item icon-links__icon icon-links__icon-dark icon-links__icon-clear">
+                                        <a href="#">
+                                            <span class="socicon-linkedin"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </form>
 
                         </div>
 
-                        <div class="col-xs-12 col-sm-12 col-md-6 social">
+                        <div class="col-xs-12 col-sm-12 col-md-6 social hidden-landscape">
                             <h4 class="divider divider__normal">Get Me in Social Networks</h4>
 
                             <div>
                                 <ul class="icon-links">
                                     <li class="icon-links__icon icon-links__icon-dark">
                                         <a href="#">
-                                    <span class="socicon-github"></span>
-                                </a>
+                                            <span class="socicon-github"></span>
+                                        </a>
                                     </li>
                                     <li class="icon-links__icon icon-links__icon-dark">
                                         <a href="#">
-                                    <span class="socicon-stackoverflow"></span>
-                                </a>
+                                            <span class="socicon-stackoverflow"></span>
+                                        </a>
                                     </li>
                                     <li class="icon-links__icon icon-links__icon-dark">
                                         <a href="#"> 
-                                    <span class="socicon-linkedin"></span>
-                                </a>
+                                            <span class="socicon-linkedin"></span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -512,7 +531,18 @@
 
 
     <!-- inject:js -->
-    <script src="dist/scripts.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="/node_modules/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+    <script src="/node_modules/iscroll/build/iscroll.js"></script>
+    <script src="/node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+    <script src="/src/js/buttonEvents.js"></script>
+    <script src="/src/js/menu.js"></script>
+    <script src="/src/js/modal.js"></script>
+    <script src="/src/js/observer.js"></script>
+    <script src="/src/js/scroll.js"></script>
+    <script src="/src/js/shared.js"></script>
+    <script src="/src/js/slider.js"></script>
     <!-- endinject -->
     <!--End-->
 
