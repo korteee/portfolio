@@ -2,51 +2,64 @@
 @import "../variables";
 #scroll-slider-wrapper {
     overflow: hidden;
-    width: 50vw;
+    width: 80vw;
     height: 100%;
     z-index: 3;
     margin: 0 auto;
+    @include desktop {
+        width: 50vw;
+    }
 }
 
 .slider {
     z-index: 3;
-    width: 100vw;
+    width: 160vw;
     height: 100%;
     user-select: none;
     margin: 0 auto;
+    @include desktop {
+        width: 100vw;
+    }
     &__slide {
-        width: 50vw;
+        width: 80vw;
         height: 100%;
         float: left;
+        @include desktop {
+            width: 50vw;
+        }
     }
     &__controls {
         &-left,
         &-right {
             border: none;
-            padding:5px 10px !important;
+            padding: 5px 10px !important;
             position: absolute;
             top: 50%;
-            font-size:200%;
+            font-size: 200%;
             transform: translate(0, -50%);
         }
         &-left {
             left: -1px;
-            border-bottom-left-radius:0 !important;
+            border-bottom-left-radius: 0 !important;
             border-top-left-radius: 0 !important;
             &:after {
                 content: '‹';
-                height:38px;
-                display:block;
             }
         }
         &-right {
             right: -1px;
-            border-bottom-right-radius:0 !important;
+            border-bottom-right-radius: 0 !important;
             border-top-right-radius: 0 !important;
             &:after {
                 content: '›';
-                height:38px;
-                display:block;
+            }
+        }
+        &-right:after,
+        &-left:after {
+            display: block;
+            height: 28px;
+            @include desktop {
+                height: 38px;
             }
         }
     }

@@ -8,6 +8,14 @@
     }
 }
 
+/**Portrait Orientation for Devies**/
+
+@mixin portrait {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
 
 /** Background Opacity **/
 

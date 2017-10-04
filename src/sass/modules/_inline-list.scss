@@ -1,0 +1,14 @@
+.inline-list {
+    display: inline-block;
+    margin-top: 5%;
+    &-right {
+        @extend .pull-right;
+    }
+    &__item {
+        list-style-type: none;
+        display: inline;
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}

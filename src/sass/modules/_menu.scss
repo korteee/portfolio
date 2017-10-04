@@ -12,16 +12,20 @@ $menu-width:40%;
     transform: translate(100%, 0);
     @include transition;
     &-toggle-button {
-        float: left;
         border: none;
         background-color: transparent;
         position: absolute;
-        left: -20%;
+        left: -25%;
         top: 2%;
         padding: 0.9em;
         @include transition;
         @include tablet-p-l {
             left: -15%;
+        }
+
+        @include landscape {
+            left:-15%;
+            top:4%;
         }
         &:before {
             content: "";

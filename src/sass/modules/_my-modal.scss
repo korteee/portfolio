@@ -22,11 +22,19 @@
         top: 50%;
         transform: translate(-50%, -50%);
         background-color: $white;
-        width: 70vw;
-        height: 90vh;
-        border-radius: 5px;
-        padding: 50px 10vw;
+        
+        
+        padding: 50px 11%;
         overflow: hidden;
+        width:100vw;
+        height:100vh;
+
+        @include desktop {
+            width: 70vw;
+            height: 90vh;
+            border-radius: 5px;
+        }
+
         &-close {
             position: absolute;
             right: 10px;

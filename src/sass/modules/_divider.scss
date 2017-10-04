@@ -6,6 +6,12 @@
             margin-top: 10%;
             margin-bottom: 10%;
         }
+
+        @include landscape {
+            margin-top:2.5%;
+            margin-bottom:2.5%;
+        };
+
         margin-top:5%;
         margin-bottom:5%;
     }
@@ -20,6 +26,11 @@
             margin-bottom: 10%;
         }
 
+        @include landscape {
+            margin-top:5%;
+            margin-bottom:5%;
+        };
+
         margin-top:10%;
         margin-bottom:10%;
     }
@@ -33,6 +44,12 @@
             margin-top: 20%;
             margin-bottom: 20%;
         }
+
+        @include landscape {
+            margin-top:7.5%;
+            margin-bottom:7.5%;
+        };
+
         margin-top:15%;
         margin-bottom:15%;
     }

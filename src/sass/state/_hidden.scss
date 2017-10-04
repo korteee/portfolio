@@ -1,0 +1,25 @@
+@import './../_mixins';
+.hidden {
+    &-landscape {
+        @include mobile-l {
+            display: none;
+        }
+
+        @include desktop {
+            display:block;
+        }
+    }
+
+    &-portrait {
+
+        display: none;
+
+        @include mobile-l {
+            display: block;
+        }
+
+        @include desktop {
+            display:none;
+        }
+    }
+}
