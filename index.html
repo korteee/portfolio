@@ -29,11 +29,21 @@
     <nav class="menu">
         <button class="menu-toggle-button"></button>
         <ul class="menu__list">
-            <li><a id="home-button" class="menu__item menu__item-active" href="#">Home</a></li>
-            <li><a id="about-button" class="menu__item" href="#">About</a></li>
-            <li><a id="skills-button" class="menu__item" href="#">Skillset</a></li>
-            <li><a id="projects-button" class="menu__item" href="#">Projects</a></li>
-            <li><a id="contact-button" class="menu__item" href="#">Contact</a></li>
+            <li>
+                <a id="home-button" class="menu__item menu__item-active" href="#">Home</a>
+            </li>
+            <li>
+                <a id="about-button" class="menu__item" href="#">About</a>
+            </li>
+            <li>
+                <a id="skills-button" class="menu__item" href="#">Skillset</a>
+            </li>
+            <li>
+                <a id="projects-button" class="menu__item" href="#">Projects</a>
+            </li>
+            <li>
+                <a id="contact-button" class="menu__item" href="#">Contact</a>
+            </li>
         </ul>
     </nav>
 
@@ -67,20 +77,27 @@
 
 
                 <div class="profile-picture">
-                    <img src="./src/img/stavros_kortesas.png" alt="stavros_kortesas">
+                    <img src="./src/img/stavros_kortesas.jpg" alt="stavros_kortesas">
                 </div>
 
                 <div class="slide__content slide__content-about">
                     <div class="article">
                         <h2 class="article__title">About Me</h2>
 
-                        <p class="article__content">Proactively iterate enterprise opportunities via top-line internal or "organic" sources. Assertively
-                            architect high-payoff products before exceptional relationships. Quickly build viral architectures
-                            with open-source models. Efficiently reinvent leveraged infrastructures through state of the
-                            art testing procedures. Authoritatively plagiarize bricks-and-clicks experiences before 24/365
-                            e-commerce. Enthusiastically leverage other's progressive strategic theme areas with excellent
-                            information. Synergistically cultivate progressive total linkage.
+                        <p class="article__content">My name is Stavros. I live in lovely Thessaloniki but I enjoy travelling around the world. I have
+                            graduated from school at 2010 and started my studies in computer science at the Applied Informatics
+                            department of University of Macedonia. I was not passionate with computer science as a student
+                            but I found love on programming just right after my graduation at 2016. My journey as a developer
+                            started one month before my graduation when I started working as a hybrid mobile developer and
+                            a web application developer.
                         </p>
+
+                        <p class="article__content">If you would ask me what programing means to me I would tell you programing is coffee and music,
+                            anger and fun, despair and excitement, dry eyes and total satisfaction. In my free time you will
+                            find me scrolling around stackoverflow, working on my own or freelance projects or studying about
+                            new trends and tools around the web world.
+                        </p>
+
                         <button id="letsTalkButton" class="btn btn-dark article__button">Let's Talk</button>
                     </div>
                 </div>
@@ -97,28 +114,26 @@
                     <div class="article slide__content-top">
                         <h2 class="article__title">Skillset</h2>
                         <p class="article__content">
-                            Throughout the past years cultivate team building systems before premium paradigms. Conveniently disintermediate process-centric
-                            methodologies for backend growth strategies. Dramatically enhance bricks-and-clicks niches vis-a-vis
-                            maintainable expertise. Distinctively architect reliable interfaces whereas equity invested results.
+                            My recent history as a developer found me digging around web technologies. I am mastering front end development and I always
+                            stick on best practices. I have also taken some steps on back end development. For any question,
+                            javascript is the answer.
                         </p>
                     </div>
 
 
 
-                    <div class="row divider divider__small hidden-landscape">
+                    <div class="row divider divider__big hidden-landscape">
                         <div class="col-md-4">
                             <div class="list">
                                 <div class="list__title">
-                                    <h5>Development Skills</h5>
+                                    <h5>Front End</h5>
                                 </div>
 
                                 <div class="list__content">
                                     <ul>
                                         <li>HTML5</li>
-                                        <li>CSS3</li>
-                                        <li>Javascript</li>
-                                        <li>jQuery</li>
-                                        <li>Bootstrap</li>
+                                        <li>CSS Preprocessors (SASS)</li>
+                                        <li>AngularJS</li>
                                     </ul>
                                 </div>
 
@@ -127,14 +142,14 @@
                         <div class="col-md-4">
                             <div class="list">
                                 <div class="list__title">
-                                    <h5>Project Management Skills</h5>
+                                    <h5>Back End</h5>
                                 </div>
 
                                 <div class="list__content">
                                     <ul>
-                                        <li>Github</li>
-                                        <li>BitBucket</li>
-                                        <li>Trello</li>
+                                        <li>NodeJS</li>
+                                        <li>Express</li>
+                                        <li>MySQL</li>
                                     </ul>
                                 </div>
 
@@ -143,15 +158,15 @@
                         <div class="col-md-4">
                             <div class="list">
                                 <div class="list__title">
-                                    <h5>Personal Skills</h5>
+                                    <h5>Automation & Version Control Tools</h5>
                                 </div>
 
                                 <div class="list__content">
                                     <ul>
-                                        <li>Guitar playing</li>
-                                        <li>Gaming</li>
-                                        <li>Travelling</li>
-                                        <li>Sleeping!</li>
+                                        <li>Git / SourceTree / VSCode</li>
+                                        <li>Node Package Manager</li>
+                                        <li>Gulp</li>
+                                        <li>Webpack</li>
                                     </ul>
                                 </div>
 
@@ -306,10 +321,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-6">
                             <h4 class="divider divider__normal">I'm Available for Hiring!</h4>
 
-                            <form class="form">
-                                <input class="form__input form__input-left" placeholder="Your Name*" type="text">
-                                <input class="form__input form__input-right" placeholder="Your Email*" type="text">
-                                <textarea class="form__input form__input-bottom no-resizable" rows="5" placeholder="Share Your Thoughts*"></textarea>
+                            <form id="contactForm" class="form">
+                                <input name="name" class="form__input form__input-left" placeholder="Your Name*" type="text">
+                                <input name="email" class="form__input form__input-right" placeholder="Your Email*" type="text">
+                                <textarea name="message" class="form__input form__input-bottom no-resizable" rows="5" placeholder="Share Your Thoughts*"></textarea>
                                 <button class="btn btn-dark form__input-bottom" type="submit">Send Message</button>
 
                                 <ul class="inline-list inline-list-right icon-link hidden-portrait">
@@ -352,7 +367,7 @@
                                         </a>
                                     </li>
                                     <li class="icon-links__icon icon-links__icon-dark">
-                                        <a href="#"> 
+                                        <a href="#">
                                             <span class="socicon-linkedin"></span>
                                         </a>
                                     </li>
@@ -406,8 +421,8 @@
                                 <li class="info-list__item">
                                     <span class="info-list__item-key">Project Url:</span>
                                     <span class="info-list__item-value">
-                            <a href="#">Some Url</a>
-                        </span>
+                                        <a href="#">Some Url</a>
+                                    </span>
                                 </li>
                             </ul>
 
@@ -472,8 +487,8 @@
                                 <li class="info-list__item">
                                     <span class="info-list__item-key">Project Url:</span>
                                     <span class="info-list__item-value">
-                            <a href="#">Some Url</a>
-                        </span>
+                                        <a href="#">Some Url</a>
+                                    </span>
                                 </li>
                             </ul>
 
@@ -537,6 +552,7 @@
     <script src="/node_modules/iscroll/build/iscroll.js"></script>
     <script src="/node_modules/babel-polyfill/dist/polyfill.min.js"></script>
     <script src="/src/js/buttonEvents.js"></script>
+    <script src="/src/js/form.js"></script>
     <script src="/src/js/menu.js"></script>
     <script src="/src/js/modal.js"></script>
     <script src="/src/js/observer.js"></script>
