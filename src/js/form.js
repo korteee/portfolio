@@ -1,4 +1,6 @@
 const form = document.getElementById('contactForm');
+const endpoint = 'http://localhost:3000'
+const mailService = '/api/mail';
 
 $(form).submit(function (event) {
 
@@ -6,7 +8,7 @@ $(form).submit(function (event) {
     const values = {};
 
     formInputs.each(function () {
-        if(!this.name) return true;
+        if (!this.name) return true;
         values[this.name] = $(this).val();
     });
 
@@ -14,11 +16,9 @@ $(form).submit(function (event) {
 
     $.ajax({
         type: "POST",
-        url: 'http://localhost:3000/mail',
+        url: endpoint + mailService,
         data: JSON.stringify(values),
-        success: function(resp) {
-            console.log(resp)
-        },
+        success: function (resp) {},
         contentType: 'application/json',
     });
 

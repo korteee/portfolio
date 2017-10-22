@@ -91,9 +91,12 @@
         }
     }
     &__content {
-        padding: 5% 10%;
+        padding: 2% 5%;
         width: 100%;
         box-sizing: border-box;
+        @include desktop {
+            padding: 5% 10%;
+        }
         &-home {
             position: absolute;
             top: 50%;

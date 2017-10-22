@@ -1,4 +1,4 @@
-function initSlider() {
+(function initSlider() {
 
     const sliderWrapper = document.getElementById('scroll-slider-wrapper');
 
@@ -27,4 +27,4 @@ function initSlider() {
         projectsSlider.goToPage(nextPage, 0, scrollSpeed);
     })
 
-}
+})();

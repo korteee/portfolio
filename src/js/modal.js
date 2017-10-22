@@ -8,9 +8,15 @@ $(document).ready(() => {
 
     $('.masonry__item').on('click touchstart', function () {
 
-        $('#projects-modal').addClass('my-modal-open');
 
-        !Object.keys(projectsSlider).length ? initSlider() : projectsSlider.enable();
+        const isSliderInitialized = Object.keys(projectsSlider).length;
+
+        !isSliderInitialized ? initSlider() : projectsSlider.enable();
+
+        const projectIndex = $('.masonry__item').index(this);
+
+        projectsSlider.goToPage(projectIndex, 0, 0);
+        $('#projects-modal').addClass('my-modal-open')
 
         $('.my-modal-open').on('click', onModalClose)
 

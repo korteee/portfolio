@@ -1,6 +1,10 @@
 .inline-list {
     display: inline-block;
     margin-top: 5%;
+    @include landscape {
+        margin-right: 20px;
+    };
+    
     &-right {
         @extend .pull-right;
     }
