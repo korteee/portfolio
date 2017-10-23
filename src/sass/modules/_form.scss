@@ -16,8 +16,11 @@
         }
         &-bottom {
             margin-top: 5%;
-            @include landscape {
+            @include mobile-l {
                 float: right;
+            }
+            @include desktop {
+                float: none;
             }
         }
     }
