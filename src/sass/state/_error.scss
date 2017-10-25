@@ -1,0 +1,17 @@
+@import "./../variables";
+input,
+textarea {
+    &.error {
+        border-color: $red;
+        border-bottom-width: 2px;
+        @include transition;
+    }
+}
+
+;
+iframe {
+    &.error {
+        border-width: 2px;
+        border-color: $red;
+    }
+}

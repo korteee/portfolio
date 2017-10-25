@@ -32,6 +32,8 @@
     "iscroll": "^5.2.0",
     "jquery": "^1.11.1",
     "jquery-touchswipe": "^1.6.15",
-    "normalize.css": "^7.0.0"
+    "jquery-validation": "^1.17.0",
+    "normalize.css": "^7.0.0",
+    "toastr": "^2.1.2"
   }
 }

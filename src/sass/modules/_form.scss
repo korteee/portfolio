@@ -1,18 +1,22 @@
 @import "./../variables";
 @import "./../mixins";
 .form {
+
+
     &__input {
         border-width: 0 0 1px 0;
         border-style: solid;
         border-color: $dark;
-        padding: 5px 2px;
+        padding: 5px;
         width: 100%;
+        box-sizing : border-box;
+
         &-left {
             width: 45%;
         }
         &-right {
+            float:right;
             width: 45%;
-            margin-left: 5%;
         }
         &-bottom {
             margin-top: 5%;

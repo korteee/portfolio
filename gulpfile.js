@@ -20,8 +20,10 @@ const files = { in: {
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/jquery-mousewheel/jquery.mousewheel.js',
             './node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
-            './node_modules/iscroll/build/iscroll.js',,
+            './node_modules/iscroll/build/iscroll.js', ,
             './node_modules/babel-polyfill/dist/polyfill.min.js',
+            './node_modules/jquery-validation/dist/jquery.validate.min.js',
+            './node_modules/toastr/build/toastr.min.js',
             './src/js/*'
         ],
         assets: ['./src/fonts/**', './src/img/**']
@@ -83,7 +85,11 @@ gulp.task('scripts', function () {
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(uglify())
+        .pipe(uglify({
+            compress: {
+                drop_console: true
+            }
+        }))
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('./dist'));
 })
@@ -115,14 +121,16 @@ gulp.task('idd', ['sass'], () => {
 
 //Inject production dependencies
 gulp.task('ipd', function () {
-    const target = gulp.src("./index.html");
+    setTimeout(function () {
+        const target = gulp.src("./index.html");
 
-    console.log([files.out.js].concat(files.out.styles))
-    const sources = gulp.src([files.out.js].concat(files.out.styles));
-    return target.pipe(inject(sources, {
-            relative: true
-        }))
-        .pipe(gulp.dest('./'))
+        console.log([files.out.js].concat(files.out.styles))
+        const sources = gulp.src([files.out.js].concat(files.out.styles));
+        return target.pipe(inject(sources, {
+                relative: true
+            }))
+            .pipe(gulp.dest('./'))
+    }, 8000);
 })
 
 gulp.task('clean-dist', function () {

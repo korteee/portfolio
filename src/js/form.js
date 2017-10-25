@@ -1,10 +1,17 @@
 const form = document.getElementById('contactForm');
+const formInputs = $('#contactForm :input');
 const endpoint = 'http://localhost:3000'
 const mailService = '/api/mail';
 
-$(form).submit(function (event) {
+$(form).submit(onFormSubmit);
 
-    const formInputs = $('#contactForm :input');
+function onFormSubmit(event) {
+    event.preventDefault();
+
+    if (!isFormValid(this)) return;
+
+    initToastrOptions();
+
     const values = {};
 
     formInputs.each(function () {
@@ -12,14 +19,45 @@ $(form).submit(function (event) {
         values[this.name] = $(this).val();
     });
 
-    event.preventDefault();
+    //Adding recaptcha response here
+    values['g-recaptcha-response'] = recaptcha.response;
 
     $.ajax({
         type: "POST",
         url: endpoint + mailService,
         data: JSON.stringify(values),
-        success: function (resp) {},
+        success: onSuccess,
+        error: onError,
         contentType: 'application/json',
     });
 
-})
+}
+
+function isFormValid(form) {
+    const isValid = $(form).valid() && recaptcha.checked;
+    if (recaptcha.checked) return isValid;
+    $('.g-recaptcha iframe').addClass('error');
+    return isValid;
+};
+
+function onSuccess(response) {
+    clearForm();
+    toastr.success(`Stavros will reply as soon as possible.`, `Congrats! You're message is on its way.`);
+
+    function clearForm() {
+        grecaptcha.reset();
+        $(form)[0].reset();
+    };
+
+};
+
+function onError(response) {
+    toastr.warning(`Please try again later.`, `Whoops. Something happened and your message could not be delivered.`);
+};
+
+
+function initToastrOptions() {
+    toastr.options = {
+        positionClass: "toast-top-left"
+    };
+}

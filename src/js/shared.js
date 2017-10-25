@@ -8,6 +8,10 @@ let projectsSlider = {};
 let scrolledOverFirstSlide = false;
 let scrollEndSubject = new Subject();
 const scrollSpeed = 500;
+const recaptcha = {
+    response: null,
+    checked: false
+};
 
 
 window.isMobile = function () {
