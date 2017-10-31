@@ -2,30 +2,30 @@
 @import "../variables";
 #scroll-slider-wrapper {
     overflow: hidden;
-    width: 80vw;
+    width: $slideWidthMobile;
     height: 100%;
     z-index: 3;
     margin: 0 auto;
     @include desktop {
-        width: 50vw;
+        width: $slideWidthDesktop;
     }
 }
 
 .slider {
     z-index: 3;
-    width: 160vw;
+    width: $totalProjects * $slideWidthMobile;
     height: 100%;
     user-select: none;
     margin: 0 auto;
     @include desktop {
-        width: 150vw;
+        width: $totalProjects * $slideWidthDesktop;
     }
     &__slide {
-        width: 80vw;
+        width: $slideWidthMobile;
         height: 100%;
         float: left;
         @include desktop {
-            width: 50vw;
+            width: $slideWidthDesktop;
         }
     }
     &__controls {

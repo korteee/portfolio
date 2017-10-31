@@ -7,11 +7,7 @@ function initializeScroll() {
     scroll = new IScroll(wrapper, {
         snap: true,
         mouseWheel: true,
-        invertWheelDirection: true,
-        snapSpeed: scrollSpeed,
-        disableMouse: false,
-        disableTouch: false,
-        disablePointer: false
+        snapSpeed: scrollSpeed
     });
 
     /**Scroller Click */
@@ -34,8 +30,6 @@ function initializeScroll() {
         let scrolledDown = (scroll.y < yOffset) || (scroll.y === yOffset && scroll.y < 0);
         yOffset = scroll.y;
         scrolledOverFirstSlide = (activeIndex === 0 && !scrolledDown)
-        scrollEndSubject.notify();
-        console.log(scrollEndSubject.Observers);
 
         //Prevent default if scroll exceed active index
         if ((activeIndex === 0 && !scrolledDown) || (activeIndex === pageNames.length - 1 && scrolledDown))
