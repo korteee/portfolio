@@ -1,8 +1,7 @@
-$(document).ready(() => {
-
+function initializeScroll() {
     pageNames.forEach(key => {
         pages[key] = document.getElementById(key);
-    })
+    });
 
     const wrapper = document.getElementById('wrapper');
     scroll = new IScroll(wrapper, {
@@ -49,7 +48,7 @@ $(document).ready(() => {
             $('.menu').removeClass('menu-open');
         }, 200)
 
-        
+
     })
 
     /**Refresh scroll on orientation change */
@@ -58,6 +57,4 @@ $(document).ready(() => {
             scroll.refresh();
         }, 0)
     })
-
-
-});
+}

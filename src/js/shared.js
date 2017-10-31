@@ -53,3 +53,9 @@ function scrollToElement(elementName) {
     scroll.currentPage.pageY = pageNames.indexOf(elementName);
     scroll.currentPage.y = parts[pageNames.indexOf(elementName)];
 }
+
+
+$(document).ready(function(){
+    setSlidesWidth();
+    setTimeout(initializeScroll,1000);
+});
