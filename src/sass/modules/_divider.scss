@@ -1,7 +1,7 @@
 @import "./../mixins";
 .divider {
     display: block;
-    &__small {
+    &-small {
         @include desktop {
             margin-top: 10%;
             margin-bottom: 10%;
@@ -15,7 +15,7 @@
         margin-top:5%;
         margin-bottom:5%;
     }
-    &__normal {
+    &-normal {
         @include desktop {
             margin-top: 15%;
             margin-bottom: 15%;
@@ -34,7 +34,7 @@
         margin-top:10%;
         margin-bottom:10%;
     }
-    &__big {
+    &-big {
         @include desktop {
             margin-top: 20px;
             margin-bottom: 20px;
@@ -54,7 +54,7 @@
         margin-bottom:15%;
     }
 
-    &__15 {
+    &-15 {
         margin-top:15px;
         margin-bottom:15px;
     }

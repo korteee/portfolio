@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins';
 .list {
     display: inline-block;
     margin-top: 15px;
@@ -16,19 +17,21 @@
             list-style-type: none;
             li {
                 position: relative;
-
                 &:not(:last-child) {
-                    margin-bottom:5%;
+                    margin-bottom: 5%;
                 }
-
                 &:before {
                     content: '';
                     display: inline-block;
-                    width: 15px;
+                    width: 8px;
                     height: 1px;
                     background-color: $dark;
                     margin-right: 5px;
-                    margin-bottom: 6px;
+                    margin-bottom: 3px;
+                    @include desktop {
+                        width: 15px;
+                        margin-bottom: 6px;
+                    }
                 }
             }
         }

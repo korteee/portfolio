@@ -13,7 +13,7 @@
         background-color: $white;
     }
     &-home {
-        background: url('./../img/desk.gif');
+        background: url('./../img/desk_bw.gif');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -73,6 +73,7 @@
     }
     &-portfolio {
         .projects {
+            @extend .container-fluid;
             height: 60%;
             @include tablet-l {
                 height: 48%
@@ -81,6 +82,15 @@
     }
     &-contact {
         height: 95vh;
+
+        .form-wrapper {
+            @extend .row;
+        }
+
+        .social,
+        .form-container {
+            @extend .col-xs-12, .col-sm-12, .col-md-6;
+        };
         @include desktop {
             .social {
                 text-align: right;

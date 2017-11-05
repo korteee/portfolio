@@ -1,7 +1,7 @@
 .project-description {
     @extend .row;
     @extend .divider;
-    @extend .divider__15;
+    @extend .divider-15;
     &__details {
         @extend .col-md-8;
         &-title {

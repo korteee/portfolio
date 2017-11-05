@@ -2,12 +2,8 @@
 @import "../variables";
 .masonry {
     box-sizing: border-box;
-    column-count: 1;
-    column-gap: 0;
-    column-count: 5;
-    @include desktop {
-        column-count: 3;
-    }
+    @extend .row;
+    
     img {
         @include img-responsive;
         display: inline-block;
@@ -17,7 +13,8 @@
         overflow: hidden;
         position: relative;
         text-align: center;
-        width: 100%;
+        padding:0;
+        @extend .col-md-3, .col-sm-4 , .col-xs-6;
         @include desktop {
             height: 30vh;
         }
@@ -25,9 +22,5 @@
             height: 100%;
         }
     }
-    /* Change column count on desktop */
-    @include desktop {
-        column-count: 5;
-        break-inside: avoid;
-    }
+  
 }
