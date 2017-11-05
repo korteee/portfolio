@@ -14,7 +14,7 @@
         position: relative;
         text-align: center;
         padding:0;
-        @extend .col-md-3, .col-sm-4 , .col-xs-6;
+        @extend .col-md-3, .col-sm-4 , .col-xs-4;
         @include desktop {
             height: 30vh;
         }
