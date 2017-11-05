@@ -43,18 +43,11 @@
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%, -50%);
-                @include desktop-lg {
+                transform: translate(-50%, -26%);
+                @include desktop {
+                    transform: translate(-50%, -50%);
                     height: auto;
                     width: 100%;
-                }
-                @include desktop-md {
-                    height: 100%;
-                    width: auto;
-                }
-                @include desktop-sm {
-                    height: 100%;
-                    width: auto;
                 }
             }
             @include mobile-l {
@@ -82,15 +75,16 @@
     }
     &-contact {
         height: 95vh;
-
         .form-wrapper {
             @extend .row;
         }
-
         .social,
         .form-container {
-            @extend .col-xs-12, .col-sm-12, .col-md-6;
-        };
+            @extend .col-xs-12,
+            .col-sm-12,
+            .col-md-6;
+        }
+        ;
         @include desktop {
             .social {
                 text-align: right;
