@@ -18,7 +18,10 @@
             li {
                 position: relative;
                 &:not(:last-child) {
-                    margin-bottom: 5%;
+                    margin-bottom: 5px;
+                    @include desktop {
+                        margin-bottom:10px;
+                    }
                 }
                 &:before {
                     content: '';
