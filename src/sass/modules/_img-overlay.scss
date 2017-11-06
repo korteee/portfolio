@@ -19,11 +19,10 @@
         }
         .img-overlay__content {
             opacity: 1;
-            margin-top: 35%;
+            margin-top: 25%;
         }
     }
     &__content {
-        margin-bottom: -35%;
         @include transition;
         text-align: center;
         opacity: 0;
