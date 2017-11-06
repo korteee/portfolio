@@ -11,6 +11,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const runSequence = require('run-sequence');
 const replace = require('gulp-replace');
+const merge = require('merge-stream');
 
 
 
@@ -20,13 +21,14 @@ const files = { in: {
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/jquery-mousewheel/jquery.mousewheel.js',
             './node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
-            './node_modules/iscroll/build/iscroll.js', ,
+            './node_modules/iscroll/build/iscroll.js',
             './node_modules/babel-polyfill/dist/polyfill.min.js',
             './node_modules/jquery-validation/dist/jquery.validate.min.js',
             './node_modules/toastr/build/toastr.min.js',
             './src/js/*'
         ],
-        assets: ['./src/fonts/**', './src/img/**', './src/videos/**', './favicon/**']
+        assets: ['./src/fonts/**', './src/img/**', './src/videos/**'],
+        favicon: './favicon/**'
     },
     out: {
         styles: `./dist/styles.css`,
@@ -104,9 +106,14 @@ gulp.task('styles', ['sass'], function () {
 })
 
 gulp.task('copy-assets', function () {
-    gulp.src(files.in.assets, {
-            base: './src'
-        })
+    const assets = gulp.src(files.in.assets, {
+        base: './src'
+    });
+    const favicon = gulp.src(files.in.favicon, {
+        base: '.'
+    });
+
+    merge(assets, favicon)
         .pipe(gulp.dest(files.out.assets));
 })
 
