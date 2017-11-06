@@ -9,6 +9,20 @@ $(document).ready(() => {
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
 
             let directionCallbacks = {
+                'up': () => {
+                    if (!window.isMobile() || isOnFullScreen) return;
+                    setFullScreen();
+                },
+                'down': () => {
+                    if (scrollEndSubject.Observers.length) return;
+                    let scrollEndObserver = new Observer(function () {
+                        console.log("Menu is running")
+                        if (!window.isMobile() || !scrolledOverFirstSlide) return;
+                        disableFullScreen();
+                        scrollEndSubject.removeObserver(this);
+                    });
+                    scrollEndSubject.addObserver(scrollEndObserver);
+                },
                 'left': () => {
                     $('.menu').addClass('menu-open')
                 },
@@ -16,7 +30,6 @@ $(document).ready(() => {
                     $('.menu').removeClass('menu-open')
                 }
             }
-
             if (directionCallbacks[direction])
                 directionCallbacks[direction]();
 

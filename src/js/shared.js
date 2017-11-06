@@ -6,6 +6,7 @@ let parts = [];
 let scroll = {};
 let projectsSlider = {};
 let scrolledOverFirstSlide = false;
+let scrollEndSubject = new Subject();
 const scrollSpeed = 500;
 const recaptcha = {
     response: null,
@@ -21,6 +22,6 @@ function scrollToElement(elementName) {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function(){
     initializeScroll();
 });
