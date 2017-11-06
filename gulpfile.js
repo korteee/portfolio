@@ -26,7 +26,7 @@ const files = { in: {
             './node_modules/toastr/build/toastr.min.js',
             './src/js/*'
         ],
-        assets: ['./src/fonts/**', './src/img/**']
+        assets: ['./src/fonts/**', './src/img/**', './src/videos/**', './favicon/**']
     },
     out: {
         styles: `./dist/styles.css`,
