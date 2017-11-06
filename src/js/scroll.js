@@ -29,7 +29,6 @@ function initializeScroll() {
 
         let scrolledDown = (scroll.y < yOffset) || (scroll.y === yOffset && scroll.y < 0);
         yOffset = scroll.y;
-        scrolledOverFirstSlide = (activeIndex === 0 && !scrolledDown)
 
         //Prevent default if scroll exceed active index
         if ((activeIndex === 0 && !scrolledDown) || (activeIndex === pageNames.length - 1 && scrolledDown))
@@ -41,6 +40,8 @@ function initializeScroll() {
         setTimeout(() => {
             $('.menu').removeClass('menu-open');
         }, 200)
+        scrolledOverFirstSlide = (activeIndex === 0 && !scrolledDown);
+
 
 
     })

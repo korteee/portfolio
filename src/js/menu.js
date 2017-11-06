@@ -14,6 +14,7 @@ $(document).ready(() => {
                     setFullScreen();
                 },
                 'down': () => {
+                    scrollEndSubject.notify();
                     if (scrollEndSubject.Observers.length) return;
                     let scrollEndObserver = new Observer(function () {
                         console.log("Menu is running")
