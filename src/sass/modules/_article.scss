@@ -6,15 +6,24 @@
 
     &__title {
         font-size:200%;
+        @include desktop-short {
+            font-size:150%;
+        }
     }
 
     &__content {
         margin-top:5%;
         font-size:120%;
+        @include desktop-short {
+            font-size:100%;
+        }
     }
 
     &__button {
         margin-top:5%;
         font-size:120%;
+        @include desktop-short {
+            font-size:100%;
+        }
     }
 }

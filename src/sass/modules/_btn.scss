@@ -1,15 +1,15 @@
 @import "../mixins";
 @import "../variables";
-
 button.btn {
     text-transform: capitalize;
-    background:transparent;
-    padding:10px 15px;
-    border:1px solid;
-    border-radius:5px;
-
+    background: transparent;
+    padding: 10px 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    @include desktop-short {
+        padding: 7px 13px;
+    }
     @include transition;
-
     &-dark,
     &-white:focus {
         border-color: $dark;

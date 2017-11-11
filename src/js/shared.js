@@ -33,6 +33,11 @@ function fullscreen(action) {
 
 };
 
+function isOnFacebook() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+};
+
 function setFullScreen() {
     fullscreen(1);
     setTimeout(() => {
@@ -57,4 +62,5 @@ function scrollToElement(elementName) {
 
 $(document).ready(function(){
     initializeScroll();
+    checkBrowserSupport();
 });

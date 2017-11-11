@@ -19,6 +19,12 @@
             width: 100%;
             object-fit: cover;
         }
+        &-no-video-support {
+            background-image:url('./../img/desktop_screenshot.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+        }
         h1,
         h2,
         h3,
