@@ -2,6 +2,7 @@ const form = document.getElementById('contactForm');
 const formInputs = $('#contactForm :input');
 const endpoint = 'http://localhost:3000'
 const mailService = '/api/mail';
+let formFieldsDisabled = false;
 
 $(form).submit(onFormSubmit);
 
@@ -9,6 +10,8 @@ function onFormSubmit(event) {
     event.preventDefault();
 
     if (!isFormValid(this)) return;
+
+    toggleFormFields(form);
 
     initToastrOptions();
 
@@ -48,11 +51,13 @@ function onSuccess(response) {
         grecaptcha.reset();
         $(form)[0].reset();
     };
+    toggleFormFields(form);
 
 };
 
 function onError(response) {
     toastr.warning(`Please try again later.`, `Whoops. Something happened and your message could not be delivered.`);
+    toggleFormFields(form);
 };
 
 
@@ -60,4 +65,17 @@ function initToastrOptions() {
     toastr.options = {
         positionClass: "toast-top-left"
     };
+}
+
+function toggleFormFields(form) {
+    if (formFieldsDisabled) {
+        $(form).find('input, textarea, button').attr('disabled', false);
+        formFieldsDisabled = false;
+        return;
+    };
+
+    $(form).find('input, textarea, button').attr('disabled', true);
+    formFieldsDisabled = true;
+
+
 }
