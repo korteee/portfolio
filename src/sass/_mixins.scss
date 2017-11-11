@@ -8,6 +8,7 @@
     }
 }
 
+
 /**Portrait Orientation for Devies**/
 
 @mixin portrait {
@@ -62,7 +63,7 @@
 /* Smartphones (landscape) ----------- */
 
 @mixin mobile-l {
-    @media only screen and (min-device-width: 321px) and (orientation: landscape){
+    @media only screen and (min-device-width: 321px) and (orientation: landscape) {
         @content;
     }
 }
@@ -107,23 +108,26 @@
 /********** Small Desktop **********/
 
 @mixin desktop-sm {
-    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio:1) {
         @content;
     }
-    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio:1) {
         @content;
     }
 }
 
+
 /********** Short Desktop **********/
+
 @mixin desktop-short {
-    @media only screen and (min-device-width: 769px) and (max-device-height: 768px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-device-width: 769px) and (max-device-height: 768px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio:1) {
         @content;
     }
-    @media only screen and (min-device-width: 769px) and (max-device-height: 768px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-device-width: 769px) and (max-device-height: 768px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio:1) {
         @content;
     }
 }
+
 
 /* Desktops and laptops ----------- */
 
