@@ -56,6 +56,11 @@
                     height: 100%;
                     width: auto;
                 }
+                @include desktop-short {
+                    transform: translate(-50%, -50%);
+                    height: auto;
+                    width: 100%;
+                }
             }
             @include mobile-l {
                 display: none;

@@ -67,6 +67,9 @@
                 position: relative;
                 height: 20vw;
                 overflow: hidden;
+                @include desktop-short {
+                    display:none;
+                }
             }
             img {
                 height: auto;

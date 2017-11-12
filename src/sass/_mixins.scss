@@ -117,22 +117,19 @@
 }
 
 
-/********** Short Desktop **********/
+/* Desktops and laptops ----------- */
 
-@mixin desktop-short {
-    @media only screen and (min-device-width: 769px) and (max-device-height: 768px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio:1) {
-        @content;
-    }
-    @media only screen and (min-device-width: 769px) and (max-device-height: 768px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio:1) {
+@mixin desktop-md {
+    @media only screen and (min-width: 1224px) {
         @content;
     }
 }
 
 
-/* Desktops and laptops ----------- */
+/********** Short Desktop **********/
 
-@mixin desktop-md {
-    @media only screen and (min-width: 1224px) {
+@mixin desktop-short {
+    @media only screen and (min-width: 1224px) and (max-height:768px) {
         @content;
     }
 }
