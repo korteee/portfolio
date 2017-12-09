@@ -1,6 +1,6 @@
 const form = document.getElementById('contactForm');
 const formInputs = $('#contactForm :input');
-const endpoint = 'http://localhost:3000'
+const endpoint = 'http://stavroskortesas.com'
 const mailService = '/api/mail';
 let formFieldsDisabled = false;
 
