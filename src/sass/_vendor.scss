@@ -1,2 +1,16 @@
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "../../node_modules/toastr/build/toastr.min.css"
+// Core variables and mixins
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+// Reset and dependencies
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print';
+
+// Core CSS
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid';
+
+// Utility classes
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
+@import '../../node_modules/toastr/build/toastr.min.css';

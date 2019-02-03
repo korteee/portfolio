@@ -99,7 +99,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('styles', ['sass'], function() {
+gulp.task('styles', ['sass', 'clean-css'], function() {
   gulp
     .src(files.in.styles)
     .pipe(replace('../fonts', './fonts'))
