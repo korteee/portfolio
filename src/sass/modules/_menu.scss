@@ -1,124 +1,142 @@
-@import "./../variables";
-@import "./../mixins";
-$menu-width:40%;
+@import './../variables';
+@import './../mixins';
+$menu-width: 40%;
 .menu {
-    display: block;
-    background-color: $white;
-    width: $menu-width;
-    z-index: 2;
-    position: fixed;
-    right: 0;
-    transform: translate(100%, 0);
+  display: block;
+  background-color: $grey;
+  width: $menu-width;
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  transform: translate(100%, 0);
+  height: 100%;
+  @include transition;
+  &-toggle-button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: -40px;
+    top: 15px;
     @include transition;
-    &-toggle-button {
-        border: none;
-        background-color: transparent;
-        position: absolute;
-        left: -25%;
-        top: 2%;
-        padding: 0.9em;
-        @include transition;
-        @include tablet-p-l {
-            left: -15%;
-        }
-
-        @include landscape {
-            left:-15%;
-            top:4%;
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 1em;
-            height: 0.15em;
-            background-color: $dark;
-            box-shadow: 0 0.25em 0 0 $dark, 0 0.5em 0 0 $dark
-        }
-        @include desktop {
-            display: none;
-        }
+    @include tablet-p-l {
+      left: -40px;
     }
-    &-open {
-        right: 0;
-        transform: translate(0, 0);
-        box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.45);
-        &+#wrapper {
-            transform: translate(-$menu-width, 0);
-            @include transition;
-        }
-        .menu-toggle-button {
-            &:before {
-                content: "\274c";
-                box-shadow: none;
-                height: 0;
-            }
-        }
-        @include desktop {
-            box-shadow: none;
-            &+main {
-                transform: translate(0, 0);
-            }
-            &+#wrapper {
-                transform: translate(0, 0);
-                @include transition;
-            }
-        }
+
+    @include landscape {
+      left: -40px;
+      top: 10px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      top: -5px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 1.3em;
+      height: 0.2em;
+      background-color: $dark;
+      box-shadow: 0 0.35em 0 0 $dark, 0 0.7em 0 0 $dark;
     }
     @include desktop {
-        background-color: transparent;
-        width: auto;
-        top: 5%;
+      display: none;
+    }
+  }
+  &-open {
+    right: 0;
+    transform: translate(0, 0);
+    box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.45);
+    & + #wrapper {
+      transform: translate(-$menu-width, 0);
+      @include transition;
+    }
+    .menu-toggle-button {
+      &:after {
+        content: '';
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        left: 10px;
+        top: 2px;
+      }
+      &:before {
+        content: '✖';
+        font-size: 1.5em;
+        box-shadow: none;
+        height: 0;
+      }
+    }
+    @include desktop {
+      box-shadow: none;
+      & + main {
         transform: translate(0, 0);
-    }
-    &__list {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-            @include desktop {
-                text-align: right;
-                &:not(:first-child) {
-                    margin-top: 10px;
-                }
-            }
-        }
-    }
-    &__item {
-        text-decoration: none;
-        color: $dark;
-        padding: 10px 15px;
-        background-color: $grey;
-        display: inline-block;
-        text-align: center;
-        width: 100%;
+      }
+      & + #wrapper {
+        transform: translate(0, 0);
         @include transition;
-        @include desktop {
-            width: 85px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            background-color: $dark;
-            color: $white;
-        }
-        &:hover,
-        &:focus {
-            text-decoration: none;
-        }
-        &:hover {
-            @include desktop {
-                color: $white;
-                width: 120px;
-            }
-        }
-        &-active,
-        &:focus {
-            color: $white;
-        }
-        &-active {
-            background-color: $dark;
-            @include desktop {
-                width: 120px;
-            }
-        }
+      }
     }
+  }
+  @include desktop {
+    background-color: transparent;
+    width: auto;
+    top: 5%;
+    transform: translate(0, 0);
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      @include desktop {
+        text-align: right;
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  &__item {
+    text-decoration: none;
+    color: $dark;
+    padding: 10px 15px;
+    background-color: $white;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    @include transition;
+    @include desktop {
+      width: 85px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-color: $dark;
+      color: $white;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &:hover {
+      cursor: pointer;
+      @include desktop {
+        color: $white;
+        width: 120px;
+      }
+    }
+    &-active,
+    &:focus {
+      color: $white;
+    }
+    &-active {
+      background-color: $dark;
+      @include desktop {
+        width: 120px;
+      }
+    }
+  }
 }
